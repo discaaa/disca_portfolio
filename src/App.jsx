@@ -1,6 +1,121 @@
 import "./index.css";
 
 function App() {
+  const certificates = [
+    {
+      title: "Beelingua Certificate",
+      issuer: "Beelingua",
+      date: "2025",
+      type: "Certificate",
+      file: "/certificates/Beelingua-2025-C-e8ukfHUyonpJQ.pdf",
+    },
+    {
+      title: "Beelingua Certificate",
+      issuer: "Beelingua",
+      date: "2025",
+      type: "Certificate",
+      file: "/certificates/Beelingua-2025-C-LO6rHMA1FsXSJ.pdf",
+    },
+    {
+      title: "Beelingua Certificate",
+      issuer: "Beelingua",
+      date: "2025",
+      type: "Certificate",
+      file: "/certificates/Beelingua-2025-C-PtHJ3yTxPHsC0.pdf",
+    },
+    {
+      title: "Beelingua Certificate",
+      issuer: "Beelingua",
+      date: "2025",
+      type: "Certificate",
+      file: "/certificates/Beelingua-2025-C-YWewWlBkq31Sn.pdf",
+    },
+    {
+      title: "Front-End Web",
+      issuer: "Dicoding Academy",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dicoding Certificate - FrontEnd Web.pdf",
+    },
+    {
+      title: "JavaScript Programming",
+      issuer: "Dicoding",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dicoding Certificate - JavaScript Programming.pdf",
+    },
+    {
+      title: "Web Programming",
+      issuer: "Dicoding",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dicoding Certificate - Pemrograman Web.pdf",
+    },
+    {
+      title: "Personal Development",
+      issuer: "Dicoding",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dicoding Certificate - Pengembangan Diri.pdf",
+    },
+    {
+      title: "Financial Literacy",
+      issuer: "Dicoding",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dicoding Certificate - Financial Literacy.pdf",
+    },
+    {
+      title: "Maju AI",
+      issuer: "Hacktiv8",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Hacktiv8 - Maju AI.pdf",
+    },
+    {
+      title: "ICPC Honorable Mention",
+      issuer: "ICPC",
+      date: "",
+      type: "Achievement",
+      file: "/certificates/icpc_honorable.png",
+    },
+    {
+      title: "ICPC Medal",
+      issuer: "ICPC",
+      date: "",
+      type: "Achievement",
+      file: "/certificates/icpc_medal.png",
+    },
+    {
+      title: "ICPC Place",
+      issuer: "ICPC",
+      date: "",
+      type: "Achievement",
+      file: "/certificates/icpc_place.png",
+    },
+    {
+      title: "Live Class Certificate",
+      issuer: "",
+      date: "",
+      type: "Certificate",
+      file: "/certificates/Sertifikat Live Class - Adisca - 2802420315.pdf",
+    },
+    {
+      title: "Microsoft Azure AI Exam",
+      issuer: "Microsoft",
+      date: "",
+      type: "Certificate",
+      file: "/certificates/Sertifikat Ujian Microsoft Azure AI - Adisca - 2802420315.pdf",
+    },
+    {
+      title: "VBL Certificate",
+      issuer: "",
+      date: "",
+      type: "Certificate",
+      file: "/certificates/Sertifikat VBL - Adisca - 2802420315.pdf",
+    },
+  ];
+
   const portfolioData = {
     name: "Adisca Gandawidjaja",
 
@@ -154,6 +269,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
+          <a href="#achievements">Achievements</a>
           <a href="#contact">Contact</a>
         </div>
 
@@ -443,6 +559,87 @@ function App() {
         </div>
       </section>
 
+      <section className="section certificates-section" id="certificates">
+        <div className="section-heading">
+          <div className="section-number">
+            03
+          </div>
+
+          <div>
+            <p className="eyebrow" id="achievements">CERTIFICATES & ACHIEVEMENTS</p>
+            <h2>
+              Learning, <span>certified.</span>
+            </h2>
+          </div>
+        </div>
+
+        <p className="certificates-intro">
+          A collection of certifications and achievements from my learning
+          journey in technology, web development, AI, and computer science.
+        </p>
+
+        <div className="certificates-grid">
+          {certificates.map((certificate, index) => {
+            const extension = certificate.file.split(".").pop().toUpperCase();
+            const isImage = ["PNG", "JPG", "JPEG", "WEBP"].includes(extension);
+
+            return (
+              <article
+                className={`certificate-card certificate-${index % 4}`}
+                key={certificate.file}
+              >
+                <div className="certificate-visual">
+                  <div className="certificate-grid-pattern"></div>
+
+                  <div className="certificate-topline">
+                    <span>ADISCA G.</span>
+                    <span>{extension}</span>
+                  </div>
+
+                  <div className="certificate-orbit">
+                    <span>✦</span>
+                  </div>
+
+                  <div className="certificate-preview">
+                    <span>{certificate.type.toUpperCase()}</span>
+                    <strong>{certificate.title}</strong>
+                    {certificate.issuer && (
+                      <small>{certificate.issuer}</small>
+                    )}
+                  </div>
+
+                  {certificate.date && (
+                    <div className="certificate-year">{certificate.date}</div>
+                  )}
+
+                  {isImage && (
+                    <div className="certificate-image-badge">IMAGE</div>
+                  )}
+                </div>
+
+                <div className="certificate-info">
+                  <div className="certificate-meta">
+                    <p className="certificate-label">
+                      {certificate.type.toUpperCase()}
+                    </p>
+                    <h3>{certificate.issuer || "Achievement"}</h3>
+                  </div>
+
+                  <a
+                    href={certificate.file}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="certificate-button"
+                  >
+                    View <span>↗</span>
+                  </a>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
       <section className="section projects" id="projects">
         <div className="section-heading">
           <div className="section-number">
@@ -455,7 +652,7 @@ function App() {
             </p>
 
             <h2>
-              Things I've <span>built .</span>
+              Things I've <span>built.</span>
             </h2>
           </div>
         </div>
@@ -539,7 +736,7 @@ function App() {
           <h2>
             Let's build something
             <br />
-            <span>interesting .</span>
+            <span>interesting.</span>
           </h2>
 
           <p>

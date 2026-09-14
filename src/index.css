@@ -616,6 +616,219 @@ button {
   background: var(--white);
 }
 
+.certificates-section {
+  background: var(--cream);
+}
+
+.certificates-intro {
+  max-width: 650px;
+  margin: 25px 0 0 72px;
+  color: var(--text-soft);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.certificates-grid {
+  margin-top: 58px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.certificate-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(48, 53, 66, 0.09);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 10px 35px rgba(80, 90, 110, 0.06);
+  transition: 0.35s ease;
+}
+
+.certificate-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 48px rgba(80, 90, 110, 0.13);
+}
+
+.certificate-visual {
+  min-height: 235px;
+  padding: 21px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-0 .certificate-visual {
+  background: var(--pink);
+}
+
+.certificate-1 .certificate-visual {
+  background: var(--lavender);
+}
+
+.certificate-2 .certificate-visual {
+  background: var(--blue);
+}
+
+.certificate-3 .certificate-visual {
+  background: var(--periwinkle);
+}
+
+.certificate-grid-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  background-image:
+    linear-gradient(rgba(48, 53, 66, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(48, 53, 66, 0.08) 1px, transparent 1px);
+  background-size: 26px 26px;
+  mask-image: linear-gradient(to bottom right, black, transparent 75%);
+}
+
+.certificate-topline {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(48, 53, 66, 0.52);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.certificate-orbit {
+  width: 74px;
+  height: 74px;
+  position: absolute;
+  top: 73px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(48, 53, 66, 0.15);
+  border-radius: 50%;
+  color: rgba(48, 53, 66, 0.48);
+  font-size: 22px;
+}
+
+.certificate-orbit::before,
+.certificate-orbit::after {
+  content: "";
+  position: absolute;
+  border: 1px solid rgba(48, 53, 66, 0.12);
+  border-radius: 50%;
+}
+
+.certificate-orbit::before {
+  inset: 9px;
+}
+
+.certificate-orbit::after {
+  inset: -9px;
+}
+
+.certificate-preview {
+  position: relative;
+  z-index: 2;
+  max-width: 72%;
+  margin-top: 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.certificate-preview span {
+  color: rgba(48, 53, 66, 0.52);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.certificate-preview strong {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+}
+
+.certificate-preview small {
+  color: rgba(48, 53, 66, 0.62);
+  font-size: 10px;
+}
+
+.certificate-year {
+  position: absolute;
+  right: 21px;
+  bottom: 18px;
+  color: rgba(48, 53, 66, 0.45);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.certificate-image-badge {
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+  padding: 5px 8px;
+  border: 1px solid rgba(48, 53, 66, 0.13);
+  border-radius: 5px;
+  background: rgba(255, 253, 249, 0.38);
+  color: rgba(48, 53, 66, 0.5);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.certificate-info {
+  min-height: 83px;
+  padding: 17px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  background: rgba(255, 253, 249, 0.72);
+  border-top: 1px solid rgba(48, 53, 66, 0.07);
+}
+
+.certificate-label {
+  margin-bottom: 5px;
+  color: var(--text-light);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.certificate-meta h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.certificate-button {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 11px;
+  border: 1px solid rgba(48, 53, 66, 0.12);
+  border-radius: 7px;
+  background: rgba(255, 253, 249, 0.65);
+  color: var(--text);
+  font-size: 10px;
+  font-weight: 700;
+  transition: 0.25s ease;
+}
+
+.certificate-button:hover {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
 .projects {
   background: #f3eee5;
 }
