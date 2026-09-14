@@ -559,87 +559,6 @@ function App() {
         </div>
       </section>
 
-      <section className="section certificates-section" id="certificates">
-        <div className="section-heading">
-          <div className="section-number">
-            03
-          </div>
-
-          <div>
-            <p className="eyebrow" id="achievements">CERTIFICATES & ACHIEVEMENTS</p>
-            <h2>
-              Learning, <span>certified.</span>
-            </h2>
-          </div>
-        </div>
-
-        <p className="certificates-intro">
-          A collection of certifications and achievements from my learning
-          journey in technology, web development, AI, and computer science.
-        </p>
-
-        <div className="certificates-grid">
-          {certificates.map((certificate, index) => {
-            const extension = certificate.file.split(".").pop().toUpperCase();
-            const isImage = ["PNG", "JPG", "JPEG", "WEBP"].includes(extension);
-
-            return (
-              <article
-                className={`certificate-card certificate-${index % 4}`}
-                key={certificate.file}
-              >
-                <div className="certificate-visual">
-                  <div className="certificate-grid-pattern"></div>
-
-                  <div className="certificate-topline">
-                    <span>ADISCA G.</span>
-                    <span>{extension}</span>
-                  </div>
-
-                  <div className="certificate-orbit">
-                    <span>✦</span>
-                  </div>
-
-                  <div className="certificate-preview">
-                    <span>{certificate.type.toUpperCase()}</span>
-                    <strong>{certificate.title}</strong>
-                    {certificate.issuer && (
-                      <small>{certificate.issuer}</small>
-                    )}
-                  </div>
-
-                  {certificate.date && (
-                    <div className="certificate-year">{certificate.date}</div>
-                  )}
-
-                  {isImage && (
-                    <div className="certificate-image-badge">IMAGE</div>
-                  )}
-                </div>
-
-                <div className="certificate-info">
-                  <div className="certificate-meta">
-                    <p className="certificate-label">
-                      {certificate.type.toUpperCase()}
-                    </p>
-                    <h3>{certificate.issuer || "Achievement"}</h3>
-                  </div>
-
-                  <a
-                    href={certificate.file}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="certificate-button"
-                  >
-                    View <span>↗</span>
-                  </a>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      </section>
-
       <section className="section projects" id="projects">
         <div className="section-heading">
           <div className="section-number">
@@ -718,6 +637,87 @@ function App() {
 
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="section certificates-section" id="certificates">
+        <div className="section-heading">
+          <div className="section-number">
+            03
+          </div>
+
+          <div>
+            <p className="eyebrow" id="achievements">CERTIFICATES & ACHIEVEMENTS</p>
+            <h2>
+              Learning, <span>certified.</span>
+            </h2>
+          </div>
+        </div>
+
+        <p className="certificates-intro">
+          A collection of certifications and achievements from my learning
+          journey in technology, web development, AI, and computer science.
+        </p>
+
+        <div className="certificates-grid">
+          {certificates.map((certificate, index) => {
+            const extension = certificate.file.split(".").pop().toUpperCase();
+            const isImage = ["PNG", "JPG", "JPEG", "WEBP"].includes(extension);
+
+            return (
+              <article
+                className={`certificate-card certificate-${index % 4}`}
+                key={certificate.file}
+              >
+                <div className="certificate-visual">
+                  <div className="certificate-grid-pattern"></div>
+
+                  <div className="certificate-topline">
+                    <span>ADISCA G.</span>
+                    <span>{extension}</span>
+                  </div>
+
+                  <div className="certificate-orbit">
+                    <span>✦</span>
+                  </div>
+
+                  <div className="certificate-preview">
+                    <span>{certificate.type.toUpperCase()}</span>
+                    <strong>{certificate.title}</strong>
+                    {certificate.issuer && (
+                      <small>{certificate.issuer}</small>
+                    )}
+                  </div>
+
+                  {certificate.date && (
+                    <div className="certificate-year">{certificate.date}</div>
+                  )}
+
+                  {isImage && (
+                    <div className="certificate-image-badge">IMAGE</div>
+                  )}
+                </div>
+
+                <div className="certificate-info">
+                  <div className="certificate-meta">
+                    <p className="certificate-label">
+                      {certificate.type.toUpperCase()}
+                    </p>
+                    <h3>{certificate.issuer || "Achievement"}</h3>
+                  </div>
+
+                  <a
+                    href={certificate.file}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="certificate-button"
+                  >
+                    View <span>↗</span>
+                  </a>
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
 
