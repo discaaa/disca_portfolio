@@ -261,7 +261,7 @@ function App() {
         title: "Caeve Press On Nails",
         category: "WEB DESING & DEVELOPMENT",
         description:
-          "A nutrition tracker app designed in Figm",
+          "Built a responsive product showcase website for a custom press-on nail brand, featuring product collections, reviews, and FAQ with a clean and user-friendly interface.",
         tech: ["HTML, CSS"],
         color: "blue",
 
