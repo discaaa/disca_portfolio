@@ -262,7 +262,7 @@ function App() {
         category: "WEB DESING & DEVELOPMENT",
         description:
           "Built a responsive product showcase website for a custom press-on nail brand, featuring product collections, reviews, and FAQ with a clean and user-friendly interface.",
-        tech: ["HTML, CSS"],
+        tech: ["HTML", "CSS"],
         color: "blue",
 
         demo: "https://caevepressonnails.vercel.app/",
