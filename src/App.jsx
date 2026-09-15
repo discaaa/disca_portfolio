@@ -251,10 +251,23 @@ function App() {
         description:
           "A sentiment analysis project that classifies Tokopedia user reviews into positive, negative, and neutral sentiments using natural language processing and machine learning techniques.",
         tech: ["Python", "FastText", "TF-IDF", "Logistic Regression", "IndoBERT", "XLM-RoBERTa"],
-        color: "blue",
+        color: "lavender",
 
         github: "https://github.com/asipnana/ProjectNLP",
-      }
+      },
+
+      {
+        number: "12",
+        title: "Caeve Press On Nails",
+        category: "WEB DESING & DEVELOPMENT",
+        description:
+          "A nutrition tracker app designed in Figm",
+        tech: ["HTML, CSS"],
+        color: "blue",
+
+        demo: "https://caevepressonnails.vercel.app/",
+      },
+
     ],
   };
 
