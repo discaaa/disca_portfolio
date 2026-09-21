@@ -39,28 +39,28 @@ function App() {
     },
     {
       title: "JavaScript Programming",
-      issuer: "Dicoding",
+      issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
       file: "/certificates/Dicoding Certificate - JavaScript Programming.pdf",
     },
     {
       title: "Web Programming",
-      issuer: "Dicoding",
+      issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
       file: "/certificates/Dicoding Certificate - Pemrograman Web.pdf",
     },
     {
       title: "Personal Development",
-      issuer: "Dicoding",
+      issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
       file: "/certificates/Dicoding Certificate - Pengembangan Diri.pdf",
     },
     {
       title: "Financial Literacy",
-      issuer: "Dicoding",
+      issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
       file: "/certificates/Dicoding Certificate - Financial Literacy.pdf",
@@ -95,25 +95,32 @@ function App() {
     },
     {
       title: "Live Class Certificate",
-      issuer: "",
-      date: "",
+      issuer: "Microsoft",
+      date: "2026",
       type: "Certificate",
       file: "/certificates/Sertifikat Live Class - Adisca - 2802420315.pdf",
     },
     {
       title: "Microsoft Azure AI Exam",
       issuer: "Microsoft",
-      date: "",
+      date: "2026",
       type: "Certificate",
       file: "/certificates/Sertifikat Ujian Microsoft Azure AI - Adisca - 2802420315.pdf",
     },
     {
-      title: "VBL Certificate",
-      issuer: "",
-      date: "",
+      title: "Video Based Learning Certificate",
+      issuer: "Microsoft",
+      date: "2026",
       type: "Certificate",
       file: "/certificates/Sertifikat VBL - Adisca - 2802420315.pdf",
     },
+    {
+      title: "Full Stack Web Developer",
+      issuer: "Dibimbing",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dibimbing Certificate - Full Stack Developer.pdf",
+    }
   ];
 
   const portfolioData = {
