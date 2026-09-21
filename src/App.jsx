@@ -14,7 +14,7 @@ function App() {
       issuer: "Beelingua",
       date: "2025",
       type: "Certificate",
-      file: "/certificates/Beelingua-2025-C-LO6rHMA1FsXSJ.pdf",
+      file: "/certificates/Beelingua-2025-C-LO6rHMA1FsxJS.pdf",
     },
     {
       title: "Beelingua Certificate",
