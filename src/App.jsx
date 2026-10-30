@@ -120,6 +120,20 @@ function App() {
       date: "2026",
       type: "Certificate",
       file: "/certificates/Dibimbing Certificate - Full Stack Developer.pdf",
+    },
+    {
+      title: "Data Visualization",
+      issuer: "Dicoding Academy",
+      date: "2026",
+      type: "Certificate",
+      file: "/certificates/Dicodign Certificate - Data Visualization.pdf",
+    },
+    {
+      title: "Data Analyst",
+      issuer: "MySkill",
+      date: "2026",
+      type: "Certificate",
+      file: "https://drive.google.com/drive/folders/1yiM1Lllf_TVdaD54nJlKnznkYxZmVjXd?usp=sharing.pdf",
     }
   ];
 
@@ -139,6 +153,11 @@ function App() {
     skills: [
       "Python",
       "C",
+      "Power BI",
+      "PostgreSQL",
+      "Ms Excel",
+      "Google Sheets",
+      "Looker Studio",
       "JavaScript",
       "HTML",
       "CSS",
@@ -321,7 +340,8 @@ function App() {
           </h1>
 
           <p className="hero-description">
-            I'm a Computer Science student interested in Front-End Development, Web Development, and Machine Learning. I enjoy creating responsive interfaces, building practical applications, and exploring how technology can turn ideas into meaningful digital experiences.
+            I'm a Computer Science student interested in Front-End Development, Data Analysis, and Machine Learning. I enjoy creating responsive interfaces, building practical applications, and exploring how technology can turn ideas into meaningful digital experiences.
+            I also enjoy exploring data, identifying patterns, and uncovering insights that help turn raw data into meaningful information.
           </p>
 
           <div className="hero-buttons">
@@ -428,7 +448,7 @@ function App() {
 
               <div className="indent-3">
                 <span className="code-green">
-                  "Web Development"
+                  "Data Analysis"
                 </span>
                 ,
               </div>
@@ -463,22 +483,15 @@ function App() {
 
       <div className="marquee">
         <div className="marquee-content">
-          <span>ARTIFICIAL INTELLIGENCE</span>
+          <span>DATA ANALYST</span>
           <b>✦</b>
-
-          <span>MACHINE LEARNING</span>
-          <b>✦</b>
-
-          <span>WEB DEVELOPMENT</span>
-          <b>✦</b>
-
           <span>FRONT-END DEVELOPMENT</span>
           <b>✦</b>
-
-          <span>FULL-STACK DEVELOPMENT</span>
-          <b>✦</b>
-
           <span>ARTIFICIAL INTELLIGENCE</span>
+          <b>✦</b>
+          <span>WEB DEVELOPMENT</span>
+          <b>✦</b>
+          <span>MACHINE LEARNING</span>
         </div>
       </div>
 
