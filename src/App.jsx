@@ -329,7 +329,7 @@ function App() {
         description:
           "Analyzed Superstore sales data using Microsoft Excel to uncover sales trends, profitability patterns, and discount-related issues with an interactive dashboard with KPIs, Pivot Charts, and slicers to communicate actionable business insights.",
         tech: ["Pivot Table", "Ms Excel", "Visualization"],
-        color: "lavender",
+        color: "pink",
         filterCategory: "Data",
         demo: "https://1drv.ms/x/c/83e738290c22e35f/IQDnuGhBHI_WS5L3P1GDdrL4AXFynwuyQbXyndNX0WYskFI?e=UKTjxv",
       },
