@@ -1,4 +1,5 @@
 import "./index.css";
+import { useState } from "react";
 
 function App() {
   const certificates = [
@@ -7,6 +8,7 @@ function App() {
       issuer: "Beelingua",
       date: "2025",
       type: "Certificate",
+      category: "Language",
       file: "/certificates/Beelingua-2025-C-e8ukfHUyonpJQ.pdf",
     },
     {
@@ -14,6 +16,7 @@ function App() {
       issuer: "Beelingua",
       date: "2025",
       type: "Certificate",
+      category: "Language",
       file: "/certificates/Beelingua-2025-C-LO6rHMA1FsxJS.pdf",
     },
     {
@@ -21,6 +24,7 @@ function App() {
       issuer: "Beelingua",
       date: "2025",
       type: "Certificate",
+      category: "Language",
       file: "/certificates/Beelingua-2025-C-PtHJ3yTxPHsC0.pdf",
     },
     {
@@ -28,6 +32,7 @@ function App() {
       issuer: "Beelingua",
       date: "2025",
       type: "Certificate",
+      category: "Language",
       file: "/certificates/Beelingua-2025-C-YWewWlBkq31Sn.pdf",
     },
     {
@@ -35,6 +40,7 @@ function App() {
       issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
+      category: "Web Programming",
       file: "/certificates/Dicoding Certificate - FrontEnd Web.pdf",
     },
     {
@@ -42,6 +48,7 @@ function App() {
       issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
+      category: "Web Programming",
       file: "/certificates/Dicoding Certificate - JavaScript Programming.pdf",
     },
     {
@@ -49,6 +56,7 @@ function App() {
       issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
+      category: "Web Programming",
       file: "/certificates/Dicoding Certificate - Pemrograman Web.pdf",
     },
     {
@@ -56,6 +64,7 @@ function App() {
       issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
+      category: "Others",
       file: "/certificates/Dicoding Certificate - Pengembangan Diri.pdf",
     },
     {
@@ -63,6 +72,7 @@ function App() {
       issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
+      category: "Others",
       file: "/certificates/Dicoding Certificate - Financial Literacy.pdf",
     },
     {
@@ -70,6 +80,7 @@ function App() {
       issuer: "Hacktiv8",
       date: "2026",
       type: "Certificate",
+      category: "AI",
       file: "/certificates/Hacktiv8 - Maju AI.pdf",
     },
     {
@@ -77,6 +88,7 @@ function App() {
       issuer: "ICPC",
       date: "",
       type: "Achievement",
+      category: "Competition",
       file: "/certificates/icpc_honorable.png",
     },
     {
@@ -84,6 +96,7 @@ function App() {
       issuer: "ICPC",
       date: "",
       type: "Achievement",
+      category: "Competition",
       file: "/certificates/icpc_medal.png",
     },
     {
@@ -91,6 +104,7 @@ function App() {
       issuer: "ICPC",
       date: "",
       type: "Achievement",
+      category: "Competition",
       file: "/certificates/icpc_place.png",
     },
     {
@@ -98,6 +112,7 @@ function App() {
       issuer: "Microsoft",
       date: "2026",
       type: "Certificate",
+      category: "AI",
       file: "/certificates/Sertifikat Live Class - Adisca - 2802420315.pdf",
     },
     {
@@ -105,6 +120,7 @@ function App() {
       issuer: "Microsoft",
       date: "2026",
       type: "Certificate",
+      category: "AI",
       file: "/certificates/Sertifikat Ujian Microsoft Azure AI - Adisca - 2802420315.pdf",
     },
     {
@@ -112,6 +128,7 @@ function App() {
       issuer: "Microsoft",
       date: "2026",
       type: "Certificate",
+      category: "AI",
       file: "/certificates/Sertifikat VBL - Adisca - 2802420315.pdf",
     },
     {
@@ -119,6 +136,7 @@ function App() {
       issuer: "Dibimbing",
       date: "2026",
       type: "Certificate",
+      category: "Web Programming",
       file: "/certificates/Dibimbing Certificate - Full Stack Developer.pdf",
     },
     {
@@ -126,6 +144,7 @@ function App() {
       issuer: "Dicoding Academy",
       date: "2026",
       type: "Certificate",
+      category: "Data",
       file: "/certificates/Dicodign Certificate - Data Visualization.pdf",
     },
     {
@@ -133,7 +152,16 @@ function App() {
       issuer: "MySkill",
       date: "2026",
       type: "Certificate",
+      category: "Data",
       file: "https://drive.google.com/drive/folders/1yiM1Lllf_TVdaD54nJlKnznkYxZmVjXd?usp=sharing.pdf",
+    },
+    {
+      title: "SQL",
+      issuer: "Dicoding Academy",
+      date: "2026",
+      type: "Certificate",
+      category: "Data",
+      file: "/certificates/Dicoding Certificate - SQL.pdf",
     }
   ];
 
@@ -180,7 +208,7 @@ function App() {
           "A simple phone-brand sales website designed in Figma and implemented using HTML, CSS, and JavaScript.",
         tech: ["Figma", "HTML", "CSS", "JavaScript"],
         color: "pink",
-
+        filterCategory: "UI/UX Design",
         demo: "https://www.figma.com/proto/m7HZk8wG6o29uHddrcuxCq/VPhone---AdiscaGandawidjaja---2802420315?node-id=116-1163&starting-point-node-id=116%3A1163",
       },
 
@@ -192,110 +220,134 @@ function App() {
           "A nutrition tracker app designed in Figma",
         tech: ["Figma"],
         color: "lavender",
-
+        filterCategory: "UI/UX Design",
         demo: "https://www.figma.com/design/IN4S8ixCrKd8r17hDqX2Rl/NutriTrack?node-id=0-1&p=f&t=ZKp3ExCw9FxU0oGS-0",
       },
 
       {
-        number: "04",
+        number: "03",
         title: "BabySparks - Track Your Newborn's Nutrition",
         category: "WEB DESING & DEVELOPMENT",
         description:
           "Newborn nutrition tracker app designed in Figma",
         tech: ["Figma"],
         color: "blue",
-
+        filterCategory: "UI/UX Design",
         demo: "https://www.figma.com/proto/qBmAzMeYj2SDBki9Xap6FP/CI-Web-Bayi?node-id=45-93&starting-point-node-id=45%3A93",
       },
 
       {
-        number: "05",
+        number: "04",
         title: "SaveLy",
         category: "FULL-STACK WEB DEVELOPMENT",
         description:
           "A personal finance management application for tracking expenses, savings, budgets, goals, and financial challenges.",
         tech: ["Laravel", "PHP", "MySQL", "Bootstrap"],
         color: "periwinkle",
-
+        filterCategory: "Frontend & Fullstack",
         github: "https://github.com/discaaa/Savely_Latest",
       },
 
       {
-        number: "06",
+        number: "05",
         title: "Segmentify - RFM Analysis and K-Means Clustering",
         category: "DATA ANALYSIS & CUSTOMER SEGEMENTATION",
         description:
           "Customer segmentation that uses Recency, Frequency, and Monetary analysis to identify customer purchasing behavior and group customers into meaningful segments with useful feedbacks for business.",
         tech: ["Python", "Pandas", "Numpy", "Streamlit"],
         color: "pink",
-
+        filterCategory: "Data",
         github: "https://github.com/discaaa/RFMAnalysis_KMeansClustering",
         demo: "https://segmentify.streamlit.app/",
       },
 
       {
-        number: "07",
+        number: "06",
         title: "FitAI Workout Recommender",
         category: "AI / RECOMMENDER SYSTEM",
         description:
           "A workout recommendation system that suggests exercises based on user input using TF-IDF and cosine similarity.",
         tech: ["Python", "Streamlit", "TF-IDF", "ML"],
         color: "lavender",
-
+        filterCategory: "AI",
         github: "https://github.com/aliciaajsp/AIWorkoutRecommendation-FinalProjectML",
         demo: "https://aiworkoutrecommendation-mlproject.streamlit.app/",
       },
 
       {
-        number: "08",
+        number: "07",
         title: "SmartMental AI",
         category: "AI & WEB DEVELOPMENT",
         description:
           "An AI-powered mental wellness chatbot with customizable conversation styles and mood-based interaction.",
         tech: ["Node.js", "Express.js", "Gemini API", "JavaScript", "HTML", "CSS"],
         color: "periwinkle",
-
+        filterCategory: "AI",
         github: "https://github.com/discaaa/SmartMentalAI",
       },
 
       {
-        number: "10",
+        number: "08",
         title: "Sudoku Solver",
         category: "MACHINE LEARNING / COMPUTER VISION",
         description:
           "An AI-powered Sudoku solver that uses CNN-based digit recognition to detect numbers from Sudoku images and solves the puzzle using a backtracking algorithm.",
         tech: ["Python", "CNN", "HuggingFace", "Backtracking Algorithm"],
         color: "pink",
-
+        filterCategory: "AI",
         github: "https://github.com/aliciaajsp/CompvisSudokuProject",
       },
 
       {
-        number: "11",
+        number: "09",
         title: "Indonesian Sentiment Analysis",
         category: "NLP / MACHINE LEARNING",
         description:
           "A sentiment analysis project that classifies Tokopedia user reviews into positive, negative, and neutral sentiments using natural language processing and machine learning techniques.",
         tech: ["Python", "FastText", "TF-IDF", "Logistic Regression", "IndoBERT", "XLM-RoBERTa"],
         color: "lavender",
-
+        filterCategory: "AI",
         github: "https://github.com/asipnana/ProjectNLP",
       },
 
       {
-        number: "12",
+        number: "10",
         title: "Caeve Press On Nails",
         category: "WEB DESING & DEVELOPMENT",
         description:
           "Built a responsive product showcase website for a custom press-on nail brand, featuring product collections, reviews, and FAQ with a clean and user-friendly interface.",
         tech: ["HTML", "CSS"],
         color: "blue",
-
+        filterCategory: "Frontend & Fullstack",
         demo: "https://caevepressonnails.vercel.app/",
       },
 
     ],
   };
+
+  const projectCategories = [
+    "All",
+    "UI/UX Design",
+    "Frontend & Fullstack",
+    "AI",
+    "Data",
+  ];
+
+  const certificateCategories = [
+    "All",
+    "Language",
+    "Web Programming",
+    "AI",
+    "Data",
+    "Competition",
+    "Others",
+  ];
+  
+  const [activeProjectCategory, setActiveProjectCategory] = useState("All");
+  const [activeCertificateCategory, setActiveCertificateCategory] = useState("All");
+
+  const filteredProjects = activeProjectCategory === "All" ? portfolioData.projects : portfolioData.projects.filter((project) => project.filterCategory === activeProjectCategory);
+  const filteredCertificates = activeCertificateCategory === "All" ? certificates : certificates.filter((certificate) => certificate.category === activeCertificateCategory);
 
   return (
     <div className="app">
@@ -521,7 +573,7 @@ function App() {
             </p>
 
             <p>
-              My current focus is on Front-End Development, Web Development, and Machine Learning. I enjoy building projects that combine clean, user-friendly interfaces with practical technology, from responsive websites and full-stack applications to AI and ML-powered solutions.
+              My current focus is on Front-End Development, Data Analysis, and Machine Learning. I enjoy building projects that combine clean, user-friendly interfaces with practical technology, from responsive websites and full-stack applications to AI and ML-powered solutions.
             </p>
 
             <p>
@@ -550,9 +602,9 @@ function App() {
             </div>
 
             <div className="mini-card blue-card">
-              <div className="mini-icon">FS</div>
-              <h3>Full-Stack Development</h3>
-              <p>Building complete and functional web applications.</p>
+              <div className="mini-icon">DA</div>
+              <h3>Data Analysis</h3>
+              <p>Finding patterns in data, exploring trends, and turning data into meaningful insights.</p>
             </div>
 
             <div className="mini-card periwinkle-card">
@@ -609,8 +661,23 @@ function App() {
           </div>
         </div>
 
+        <div className="category-filters">
+          {projectCategories.map((category) => (
+            <button
+              key={category}
+              className={`category-button ${
+                activeProjectCategory === category ? "active" : ""
+              }`}
+              onClick={() => setActiveProjectCategory(category)}
+              type="button"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <div className="projects-grid">
-          {portfolioData.projects.map((project) => (
+          {filteredProjects.map((project) => (
             <article
               className={`project-card ${project.color}`}
               key={project.title}
@@ -692,8 +759,23 @@ function App() {
           journey in technology, web development, AI, and computer science.
         </p>
 
+        <div className="category-filters">
+          {certificateCategories.map((category) => (
+            <button
+              key={category}
+              className={`category-button ${
+                activeCertificateCategory === category ? "active" : ""
+              }`}
+              onClick={() => setActiveCertificateCategory(category)}
+              type="button"
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+
         <div className="certificates-grid">
-          {certificates.map((certificate, index) => {
+          {filteredCertificates.map((certificate, index) => {
             const extension = certificate.file.split(".").pop().toUpperCase();
             const isImage = ["PNG", "JPG", "JPEG", "WEBP"].includes(extension);
 

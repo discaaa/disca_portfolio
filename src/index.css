@@ -928,6 +928,45 @@ button {
   line-height: 1.75;
 }
 
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 28px 0 32px;
+}
+
+.category-button {
+  padding: 10px 18px;
+  border: 1px solid #e5d8ca;
+  border-radius: 999px;
+  background: #fbf7f0;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.category-button:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.category-button.active {
+  background: var(--periwinkle-dark);
+  border-color: var(--periwinkle);
+  color: var(--cream);
+}
+
+.category-button:focus-visible {
+  outline: 2px solid var(--border);
+  outline-offset: 3px;
+}
+
 .tech-list {
   display: flex;
   flex-wrap: wrap;
@@ -1260,6 +1299,16 @@ footer > div:first-child {
   .contact-section h2 {
     font-size: 45px;
     letter-spacing: -2px;
+  }
+
+  .category-filters {
+    gap: 8px;
+    margin: 22px 0 26px;
+  }
+
+  .category-button {
+    padding: 9px 14px;
+    font-size: 0.82rem;
   }
 
   footer {
