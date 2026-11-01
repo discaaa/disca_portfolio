@@ -333,6 +333,19 @@ function App() {
         filterCategory: "Data",
         demo: "https://1drv.ms/x/c/83e738290c22e35f/IQDnuGhBHI_WS5L3P1GDdrL4AXFynwuyQbXyndNX0WYskFI?e=UKTjxv",
       },
+  
+      {
+        number: "12",
+        title: "Olist E-Commerce Data Analysis",
+        category: "DATA & PERFORMANCE ANALYSIS",
+        description:
+          "Analyzed Olist sales data using Python, PostgreSQL, and visualization using Power BI to uncover sales performance, customer behavior, and delivery operations related issues with an interactive dashboard with KPIs and Charts to get business insights and recommendations.",
+        tech: ["Python", "PostgreSQL", "Power BI"],
+        color: "periwinkle",
+        filterCategory: "Data",
+        github: "https://github.com/discaaa/Olist_Analysis",
+        demo: "/projects/Olist E-Commerce Analysis.pdf",
+      },
     ],
   };
 
